@@ -6,11 +6,10 @@ import lxml
 import json
 import re
 
-def getStrings(filename: str) -> [str]:
+def getStrings(filename: str) -> list:
   with open(filename) as f:
     data = json.load(f)
     soup = BeautifulSoup(data["content"], features="xml")
     text = soup.text.lower().strip().split()
     text = [re.split("[^’'0-9a-zA-Z]+", word) for word in text]
-    text = [re.sub("[’']+", "", word) for wordlist in text for word in wordlist if word != "" and len(word) >= 1]
-    return text
+    return [re.sub("[’']+", "", word) for wordlist in text for word in wordlist if word != "" and len(word) >= 1]
