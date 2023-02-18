@@ -20,7 +20,7 @@ def compute(files, threadNum):
 
 def buildIndex(folderPath : str) -> None:
  
-  filePaths = np.array_split(list(findAllFiles(folderPath)), 8)
+  filePaths = np.array_split(list(findAllFiles(folderPath)), 6)
 
   p1 = multiprocessing.Process(target=compute, args=(filePaths[0], "1", ))
   p2 = multiprocessing.Process(target=compute, args=(filePaths[1], "2", ))
