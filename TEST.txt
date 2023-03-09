@@ -1,0 +1,30 @@
+Machine learning
+Computer networks
+Programming languages
+Artificial intelligence
+Database systems
+Computer architecture
+Operating systems
+Computer graphics
+Web development
+Software engineering
+Algorithm complexity
+Parallel computing
+Computer security
+Human-computer interaction
+Data visualization
+Information retrieval
+Natural language processing
+Computer vision
+Distributed systems
+Cloud computing
+
+Queries 1-10 cover common topics in computer science and should perform well in terms of ranking and runtime performance. 
+Queries 11-15 were not performing well due to the nature of the search covering more complex topics that had less textual content.
+Queries 16-20 covered more specialized topics and that didn't not perform as well due to limited content available in the index.
+
+Queries 11 - 20 were signfcantly improved from milestone 2 to milestone 3 due to the implementation of TF-IDF within our search engine taking
+into account that rarity of a term plays a large part in its ranking. Furthermore also taking into account presence of important words helped the
+terms due to our ranking algoritm providing a 25% boost to the importance of words that appear in the page title, headings, bold or strong within documents.
+In addition ranking scores are comparable across documents of different lengths, being the reason the ranking algorithm also normalizes the scores  adjusting for 
+differences in document lengths, and ensures that documents with higher raw scores are not given undue weightage simply because they are longer.
